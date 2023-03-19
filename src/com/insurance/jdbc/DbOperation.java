@@ -89,6 +89,22 @@ import java.sql.SQLException;
 			e.printStackTrace();
 		}
 		return listofdetails; 
-
+	    
+   public int insertclaimdetails (ClaimDetails c) {
+			int r2=0;
+	    	String query="insert into InsuranceDetails(policyno,reclaim,dparts,tdamage,dissue) values(?,?,?,?,?)";
+	    	try {
+	    		preparedstatement=connection.prepareStatement(query);
+	        	preparedstatement.setString(1,c.getPolicyno());
+	        	preparedstatement.setString(2,c.getReclaim());
+	        	preparedstatement.setString(3,c.getDparts());
+			preparedstatement.setString(4,c.getTdamage());
+	        	preparedstatement.setDate(5,(Date)c.getDissue());
+	    	}
+	}catch (SQLException e) {
+		e.printStackTrace();
+	}
+	return r2;
+	}
 	}
 }
