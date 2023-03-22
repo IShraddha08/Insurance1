@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration form</title>
+<script type="text/javascript" src="registration.js"></script>
+<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<style type="text/css">
+table td {
+	padding: 5px;
+}
+</style>
+</head>
+<body background="image1.webp" class="bg-info">
+	<form action="InsurenceDomineFetchServlet" method="Get">
+		<font><center><h1 style="color: blue;">Registration Form</h1></center></font>
+		
+		
+	   			<center><h2 style="color: blue;">Vehicle Details</h2></center>
+	   			
+	   <table align="center" cellspacing="20">
+	 <tr><th><span style="color: red;">*</span>Vehicle Reg.No:</th>
+	   <td><input type="text" name="vregno"	placeholder="Vehicle RegNo" id="vregno"	onblur="clearErrorMessage()" required><br></td>
+	   <td><span id="errorMsgVehicleRegNo" style="color: red;"></span></td>
+	 </tr>
+	 <tr>
+	   <th><span style="color: red;">*</span>Vehicle Make:</th>
+	   <td><input type="text" name="vmake" placeholder="Vehicle Make" id="vmake" onblur="clearErrorMessage()"><br></td>
+	   <td><span id="errorMsgVehicleMake" style="color: red;"></span></td>
+     </tr>
+	<tr>
+					<th><span style="color: red;">*</span>Vehicle Model:</th>
+					<td><input type="text" name="VMODELLL" placeholder="Vehicle Model" id="vmodel"
+						onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgVehicleModel" style="color: red;"></span></td>
+				</tr>
+				<tr><th><span style="color: red;">*</span>Vehicle CC:</th>
+					<td><input type="number" name="vcc" placeholder="Vehicle CC"
+						id="vcc" onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgVehicleCC" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;">*</span>Fuel Type:</th>
+					<td><select name="fueltype" id="fueltype"
+						onblur="clearErrorMessage()">
+							<option disabled selected>Select an Option</option>
+							<option value="Petrol">Petrol</option>
+							<option value="Diesel">Diesel</option>
+							</option>
+					</select><br></td>
+					<td><span id="errorMsgFuelType" style="color: red;"></span></td>
+				</tr>
+
+				<tr>
+					<th><span style="color: red;">*</span>Chassis No:</th>
+					<td><input type="text" name="chassisno"
+						placeholder="Chassis No" id="chassisno"
+						onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgChassisNo" style="color: red;"></span></td>
+				</tr>
+				<tr>
+
+					<th><span style="color: red;">*</span>Engine No:</th>
+					<td><input type="number" name="engineno"
+						placeholder="Engine No" id="engineno" onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgEngineNo" style="color: red;"></span></td>
+				</tr>
+
+
+				<tr>
+					<th><span style="color: red;">*</span>Manifacturing year:</th>
+					<td><input type="number" name="mfno" placeholder="MFG Year"
+						id="mfno" onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgMyear" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;">*</span>Vehicle Reg.Date:</th>
+					<td><input type="date" name="vrdate" id="vrdate"
+						onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgVehicleRegDate" style="color: red;"></span></td>
+				</tr>
+			</table>
+
+
+
+
+			<center>
+				<h2 style="color: blue;">Policy Details</h2></center>
+			<table align="center" cellpading="20">
+				<tr>
+					<th><span style="color: red;">*</span>Insurance holder Name :</th>
+					<td><input type="text" name="Iname"
+						placeholder="Enter Customer name" id="Iname"
+						onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgIname" style="color: red;"></span></td>
+
+				</tr>
+				<tr>
+					<th><span style="color: red;">*</span>Policy Number :</th>
+					<td><input type="text" name="policyno"
+						placeholder="Enter policyno" id="policyno"
+						onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgPolicyNo" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;">*</span>Policy Start Date :</th>
+					<td><input type="date" name="polstartdate" id="startdate"
+						onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgStartDate" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;">*</span>Policy Expiry Date :</th>
+					<td><input type="date"  name="polendtdate" id="expirydate"
+						onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgExpiryDate" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;"></span>Insured declared value:</th>
+					<td><select name="idvalue" id="idvalue"
+						onblur="clearErrorMessage()">
+							<option disabled selected>Select an Option</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							</option>
+					</select><br></td>
+				</tr>
+
+				<tr>
+					<th><span style="color: red;"></span>PA Cover for Passenger :</th>
+					<td><input type="number" name="pacover"
+						placeholder="Enter amount" id="pacover"
+						onblur="clearErrorMessage()"><br></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;"></span>No.of Passengers:</th>
+					<td><select name="npassenger" id="npassenger"
+						onblur="clearErrorMessage()">
+							<option disabled selected>Select an Option</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							</option>
+					</select><br></td>
+
+				</tr>
+
+				<tr>
+					<th><span style="color: red;">*</span>Eligible NCB :</th>
+					<td><input type="text" placeholder="NCB Percentage"
+						name="ncb" id="ncb" onblur="clearErrorMessage()"><br></td>
+				</tr>
+
+			</table>
+
+
+			<center>
+				<h2 style="color: blue;">Personal Details</h2>
+			</center>
+			<table align="center" cellpading="20">
+				<tr>
+					<th><span style="color: red;">*</span>Name:</th>
+					<td><input type="text" name="name" placeholder="Enter name"
+						id="name" onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgName" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;"></span>Address:</th>
+					<td><textarea rows="" cols="" placeholder="Address"
+							name="address" id="address"></textarea> </textarea></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;"></span>Pincode:</th>
+					<td><input type="text" name="pincode" placeholder="Pincode"
+						id="pincode" onblur="clearErrorMessage()"><br></td>
+
+				</tr>
+
+				<tr>
+					<th><span style="color: red;">*</span>Mobile No:</th>
+					<td><input type=text name="mobileno"
+						placeholder="MobileNo" id="mobileno" onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgMobileNo" style="color: red;"></span></td>
+				</tr>
+				<tr>
+					<th><span style="color: red;">*</span>Email id:</th>
+					<td><input type="text" name="emailid" placeholder="EmailId"
+						id="emailid" onblur="clearErrorMessage()"><br></td>
+					<td><span id="errorMsgEmailId" style="color: red;"></span></td>
+				</tr>
+
+
+			</table>
+
+			<table  align="center">
+				<tr><td><input type="submit" value="submit"	class="btn btn-success" onclick="validcheck()"> 
+				<input type="reset" value="cancel" class="btn btn-danger"></td>
+      			</tr>
+			</table>
+	</form>
+</body>
+</html>
